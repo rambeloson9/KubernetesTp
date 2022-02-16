@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: serverweb
+spec:
+  containers:
+  - name: web
+    image: maserveur/nginx:1.0
+    imagePullPolicy: Never
+    ports:
+      - containerPort: 8080
